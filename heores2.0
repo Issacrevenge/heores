@@ -1,0 +1,24 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Heroes 2.0 Script", "DarkTheme")
+local Tab = Window:NewTab("Powers")
+local PowerSection = Tab:NewSection("WandaVision")
+PowerSection:NewButton("Time Freeze", "Player's Around you will get frozen.", function()
+    print("Clicked")
+local args = {
+    [1] = "TimeFreeze"
+}
+
+game:GetService("ReplicatedStorage").Events.Scarlet.ScarletAbilities2:InvokeServer(unpack(args))
+
+end)
+PowerSection:NewButton("WVChoke", "Chokes everyone around you", function()
+    print("Clicked")
+   local args = {
+    [1] = "ShockWave",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage").Events.Scarlet.ScarletAbilities2:InvokeServer(unpack(args))
+
+end)
+local Tab = Window:NewTab("Credits") local Section = Tab:NewSection("IssacRevenge#6666") local Section = Tab:NewSection("Ajay 🦭#6881")local Section = Tab:NewSection("Claudev0#8849")
