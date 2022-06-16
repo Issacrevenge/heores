@@ -21,4 +21,77 @@ PowerSection:NewButton("WVChoke", "Chokes everyone around you", function()
 game:GetService("ReplicatedStorage").Events.Scarlet.ScarletAbilities2:InvokeServer(unpack(args))
 
 end)
-local Tab = Window:NewTab("Credits") local Section = Tab:NewSection("IssacRevenge#6666") local Section = Tab:NewSection("Ajay 🦭#6881")local Section = Tab:NewSection("Claudev0#8849")
+
+local Section = Tab:NewSection("Enchantess")
+Section:NewButton("Stone Wave", "Turns people into stone", function()
+    print("Clicked")
+    local args = {
+    [1] = "StoneWave"
+}
+
+game:GetService("ReplicatedStorage").EnchantressAbilities:InvokeServer(unpack(args))
+
+end)
+
+Section:NewButton("Sheild", "Uses enchantress sheild", function()
+    print("Clicked")
+    local args = {
+    [1] = true
+}
+
+game:GetService("ReplicatedStorage").EnchantressShield:FireServer(unpack(args))
+
+end)
+
+Section:NewButton("Sheild Off", "Turns enchantress sheild off", function()
+    print("Clicked")
+    local args = {
+    [1] = false
+}
+
+game:GetService("ReplicatedStorage").EnchantressShield:FireServer(unpack(args))
+
+end)
+
+local Section = Tab:NewSection("Iceman")
+Section:NewButton("Ice Storm", "Freezes people around you.", function()
+    print("Clicked")
+    local args = {
+    [1] = "IceStormStart"
+}
+
+game:GetService("ReplicatedStorage").IcemanAbilities:InvokeServer(unpack(args))
+
+end)
+
+Section:NewButton("Ice Storm Stop", "Sotps the storm", function()
+    print("Clicked")
+    local args = {
+    [1] = "IceStormEnd"
+}
+
+game:GetService("ReplicatedStorage").IcemanAbilities:InvokeServer(unpack(args))
+
+end)
+
+Section:NewButton("Ice Slide", "Makes a ice slide pathway as you move.", function()
+    print("Clicked")
+    local args = {
+    [1] = "IceSlideStart"
+}
+
+game:GetService("ReplicatedStorage").IcemanAbilities:InvokeServer(unpack(args))
+
+end)
+
+Section:NewButton("Ice Slide Off", "Stops the ice path", function()
+    print("Clicked")
+    local args = {
+    [1] = "IceSlideEnd"
+}
+
+game:GetService("ReplicatedStorage").IcemanAbilities:InvokeServer(unpack(args))
+
+end)
+
+local Tab = Window:NewTab("Credits") local Section = Tab:NewSection("Nicki Minaj#3017") local Section = Tab:NewSection("Ajay 🦭#6881")local Section = Tab:NewSection("Claudev0#8849")
